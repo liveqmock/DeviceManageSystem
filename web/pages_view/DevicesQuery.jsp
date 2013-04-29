@@ -48,7 +48,7 @@
                 function initJsonReader(){
                     Ext.Ajax.request(
                     {
-                        url:'/project1/DeviceFreeQuery/LoadGridRecord.action?idCustomTable='+idCustomTable,
+                        url:'/DeviceManageSystem/DeviceFreeQuery/LoadGridRecord.action?idCustomTable='+idCustomTable,
                         success:function(response,option){
                             var json=response.responseText;
                             json = "[" + json + "]";
@@ -65,7 +65,7 @@
                 
                 function initHttpProxy(){
                     proxy_grid=new Ext.data.HttpProxy({
-                        url:'/project1/DeviceFreeQuery/LoadGridData.action',
+                        url:'/DeviceManageSystem/DeviceFreeQuery/LoadGridData.action',
                         method : 'post' 
                     });
                 }
@@ -75,7 +75,7 @@
                     rm=new Ext.grid.RowNumberer();
                     Ext.Ajax.request(
                     {
-                        url:'/project1/DeviceFreeQuery/LoadGridColumn.action?idCustomTable='+idCustomTable,
+                        url:'/DeviceManageSystem/DeviceFreeQuery/LoadGridColumn.action?idCustomTable='+idCustomTable,
                         success:function(response,option){
                             var json=response.responseText;
                             json = "[rm,sm," + json + "]";
@@ -131,7 +131,7 @@
                 }
                 
                 function createExcel(){
-                    window.location.href = '/project1/DeviceFreeQuery/CreateExcel.action';
+                    window.location.href = '/DeviceManageSystem/DeviceFreeQuery/CreateExcel.action';
                 }
                 
                 //自定义查询
@@ -160,14 +160,14 @@
                                         fields:record1_1
                                     }),
                                     proxy:new Ext.data.HttpProxy({
-                                        url:'/project1/CustomfunctionManager/LoadDataToGridPanel.action',
+                                        url:'/DeviceManageSystem/CustomfunctionManager/LoadDataToGridPanel.action',
                                         method : 'post' 
                                     })
                                 });       
                 
                                 var store1_1_1=new Ext.data.Store({  //井号选择下拉框  
                                     proxy: new Ext.data.HttpProxy({     
-                                        url: '/project1/DeviceFreeQuery/LoadCustomtablecolumnNames.action?idCustomTable='+idCustomTable,
+                                        url: '/DeviceManageSystem/DeviceFreeQuery/LoadCustomtablecolumnNames.action?idCustomTable='+idCustomTable,
                                         method : 'post' 
                                     }),     
                                     reader: new Ext.data.JsonReader({     
@@ -367,7 +367,7 @@
                                 var win;
                                 var store_comb=new Ext.data.Store({  //井号选择下拉框  
                                     proxy: new Ext.data.HttpProxy({     
-                                        url: '/project1/DeviceFreeQuery/LoadCustomtablecolumnNames.action?idCustomTable='+idCustomTable,
+                                        url: '/DeviceManageSystem/DeviceFreeQuery/LoadCustomtablecolumnNames.action?idCustomTable='+idCustomTable,
                                         method : 'post' 
                                     }),     
                                     reader: new Ext.data.JsonReader({     
@@ -453,7 +453,7 @@
                     autoScroll: true,
                     lines:false, 
                     rootVisible: false,
-                    loader: new Ext.tree.TreeLoader({dataUrl:'/project1/DeviceFreeQuery/LoadDataToTreePanel.action'}),
+                    loader: new Ext.tree.TreeLoader({dataUrl:'/DeviceManageSystem/DeviceFreeQuery/LoadDataToTreePanel.action'}),
                     root:new Ext.tree.AsyncTreeNode({
                         draggable:false,
                         id:'888888888'

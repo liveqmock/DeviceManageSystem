@@ -51,7 +51,7 @@
                 function initJsonReader(){
                     Ext.Ajax.request(
                     {
-                        url:'/project1/DeviceManager/LoadGridRecord.action?idCustomTable='+idCustomTable,
+                        url:'/DeviceManageSystem/DeviceManager/LoadGridRecord.action?idCustomTable='+idCustomTable,
                         success:function(response,option){
                             var json=response.responseText;
                             json = "[" + json + "]";
@@ -70,7 +70,7 @@
                 
                 function initHttpProxy(){
                     proxy_grid=new Ext.data.HttpProxy({
-                        url:'/project1/DeviceManager/LoadGridData.action',
+                        url:'/DeviceManageSystem/DeviceManager/LoadGridData.action',
                         method : 'post' 
                     });
                 }
@@ -80,7 +80,7 @@
                     rm=new Ext.grid.RowNumberer();
                     Ext.Ajax.request(
                     {
-                        url:'/project1/DeviceManager/LoadGridColumn.action?idCustomTable='+idCustomTable,
+                        url:'/DeviceManageSystem/DeviceManager/LoadGridColumn.action?idCustomTable='+idCustomTable,
                         success:function(response,option){
                             var json=response.responseText;
                             json = "[rm,sm," + json + "]";
@@ -126,7 +126,7 @@
                 function initNewValue(){
                     Ext.Ajax.request(
                     {
-                        url:'/project1/DeviceManager/CreateInitValue.action?idCustomTable='+idCustomTable,
+                        url:'/DeviceManageSystem/DeviceManager/CreateInitValue.action?idCustomTable='+idCustomTable,
                         success:function(response,option){
                             newValue=response.responseText;
                         },
@@ -143,7 +143,7 @@
                     });  
                     if (json.length > 0) {  
                         Ext.Ajax.request({  
-                            url: "/project1/DeviceManager/DeleteDataToDb.action",  
+                            url: "/DeviceManageSystem/DeviceManager/DeleteDataToDb.action",  
                             params: {
                                 data: Ext.util.JSON.encode(json),idCustomTable:idCustomTable
                             },  
@@ -166,7 +166,7 @@
                     });  
                     if (json.length > 0) {  
                         Ext.Ajax.request({  
-                            url: "/project1/DeviceManager/UpdateDataToDb.action",  
+                            url: "/DeviceManageSystem/DeviceManager/UpdateDataToDb.action",  
                             params: {
                                 data: Ext.util.JSON.encode(json),
                                 idCustomTable:idCustomTable
@@ -289,7 +289,7 @@
                                         lines:false, 
                                         rootVisible: false,
                                         loader: new Ext.tree.TreeLoader({
-                                            dataUrl:'/project1/TablefunctionMap/LoadDataToTreePanel.action?idCustomTable='+idCustomTable
+                                            dataUrl:'/DeviceManageSystem/TablefunctionMap/LoadDataToTreePanel.action?idCustomTable='+idCustomTable
                                         }),
                                         root:new Ext.tree.AsyncTreeNode({
                                             draggable:false,
@@ -367,7 +367,7 @@
                                     var win;
                                     var store_comb=new Ext.data.Store({  //井号选择下拉框  
                                         proxy: new Ext.data.HttpProxy({     
-                                            url: '/project1/DeviceFreeQuery/LoadCustomtablecolumnNames.action?idCustomTable='+idCustomTable,
+                                            url: '/DeviceManageSystem/DeviceFreeQuery/LoadCustomtablecolumnNames.action?idCustomTable='+idCustomTable,
                                             method : 'post' 
                                         }),     
                                         reader: new Ext.data.JsonReader({     
@@ -455,7 +455,7 @@
                         lines:false, 
                         rootVisible: false,
                         loader: new Ext.tree.TreeLoader({
-                            dataUrl:'/project1/DeviceManager/LoadDataToTreePanel.action?customtabletype=1'
+                            dataUrl:'/DeviceManageSystem/DeviceManager/LoadDataToTreePanel.action?customtabletype=1'
                         }),
                         root:new Ext.tree.AsyncTreeNode({
                             draggable:false,

@@ -71,7 +71,7 @@
                 
                 function initHttpProxy_QueryActionMap(){
                     proxy_grid_QueryActionMap=new Ext.data.HttpProxy({
-                        url:'/project1/CustomtablequeryactionmapManager/LoadDataToGridPanel.action',
+                        url:'/DeviceManageSystem/CustomtablequeryactionmapManager/LoadDataToGridPanel.action',
                         method : 'post' 
                     });
                 }
@@ -232,14 +232,14 @@
                         lines:false, 
                         rootVisible: false,
                         root:new Ext.tree.AsyncTreeNode({
-                            loader: new Ext.tree.TreeLoader({dataUrl:'/project1/CustomtablecolumnManager/LoadDataToTreePanel.action'}),
+                            loader: new Ext.tree.TreeLoader({dataUrl:'/DeviceManageSystem/CustomtablecolumnManager/LoadDataToTreePanel.action'}),
                             draggable:false,
                             id:'888888888'
                         }),
                         listeners: {
                             click: function(n) {                        
                                 idCustomTable=n.attributes.id;
-                                treePanel_QueryActionEdit.getLoader().dataUrl='/project1/CustomtablequeryactioneditManager/LoadDataToTreePanel.action?idCustomTable='+idCustomTable;
+                                treePanel_QueryActionEdit.getLoader().dataUrl='/DeviceManageSystem/CustomtablequeryactioneditManager/LoadDataToTreePanel.action?idCustomTable='+idCustomTable;
                                 treePanel_QueryActionEdit.root.reload();
                             }
                         }
@@ -255,7 +255,7 @@
                     });  
                     if (json.length > 0) {  
                         Ext.Ajax.request({  
-                            url: "/project1/CustomtablequeryactionmapManager/DeleteDataToDb.action",  
+                            url: "/DeviceManageSystem/CustomtablequeryactionmapManager/DeleteDataToDb.action",  
                             params: { data: Ext.util.JSON.encode(json)},  
                             method: "POST",  
                             success: function(response) {},  
@@ -274,7 +274,7 @@
                     });  
                     if (json.length > 0) {  
                         Ext.Ajax.request({  
-                            url: "/project1/CustomtablequeryactionmapManager/UpdateDataToDb.action",  
+                            url: "/DeviceManageSystem/CustomtablequeryactionmapManager/UpdateDataToDb.action",  
                             params: { data: Ext.util.JSON.encode(json)},  
                             method: "POST",  
                             success: function(response) {  
@@ -310,7 +310,7 @@
                 
                 function initHttpProxy_QueryActionEdit(){
                     proxy_grid_QueryActionEdit=new Ext.data.HttpProxy({
-                        url:'/project1/CustomtablequeryactioneditManager/LoadDataToGridPanel.action',
+                        url:'/DeviceManageSystem/CustomtablequeryactioneditManager/LoadDataToGridPanel.action',
                         method : 'post' 
                     });
                 }
@@ -328,7 +328,7 @@
                     rm_QueryActionEdit=new Ext.grid.RowNumberer();
                     store1_1=new Ext.data.Store({  //井号选择下拉框  
                         proxy: new Ext.data.HttpProxy({     
-                            url: '/project1/CustomtablequeryactioneditManager/LoadCustomtablecolumnNames.action?idCustomTable='+idCustomTable,
+                            url: '/DeviceManageSystem/CustomtablequeryactioneditManager/LoadCustomtablecolumnNames.action?idCustomTable='+idCustomTable,
                             method : 'post' 
                         }),     
                         reader: new Ext.data.JsonReader({     
@@ -571,7 +571,7 @@
                         lines:false, 
                         split:true,
                         width:210,
-                        loader: new Ext.tree.TreeLoader({dataUrl:'/project1/CustomtablequeryactioneditManager/LoadDataToTreePanel.action?idCustomTable='+idCustomTable}),
+                        loader: new Ext.tree.TreeLoader({dataUrl:'/DeviceManageSystem/CustomtablequeryactioneditManager/LoadDataToTreePanel.action?idCustomTable='+idCustomTable}),
                         rootVisible: false,
                         root:new Ext.tree.AsyncTreeNode({
                             draggable:false,
@@ -603,7 +603,7 @@
                     });  
                     if (json.length > 0) {  
                         Ext.Ajax.request({  
-                            url: "/project1/CustomtablequeryactioneditManager/DeleteDataToDb.action",  
+                            url: "/DeviceManageSystem/CustomtablequeryactioneditManager/DeleteDataToDb.action",  
                             params: { data: Ext.util.JSON.encode(json),idCustomQueryAction:idCustomQueryAction},  
                             method: "POST",  
                             success: function(response) {},  
@@ -622,7 +622,7 @@
                     });  
                     if (json.length > 0) {  
                         Ext.Ajax.request({  
-                            url: "/project1/CustomtablequeryactioneditManager/UpdateDataToDb.action",  
+                            url: "/DeviceManageSystem/CustomtablequeryactioneditManager/UpdateDataToDb.action",  
                             params: { data: Ext.util.JSON.encode(json),idCustomQueryAction:idCustomQueryAction},  
                             method: "POST",  
                             success: function(response) {  

@@ -58,7 +58,7 @@
                 
                 function initHttpProxy(){
                     proxy_grid=new Ext.data.HttpProxy({
-                        url:'/project1/ActionmodulegroupmapManager/LoadDataToGridPanel.action',
+                        url:'/DeviceManageSystem/ActionmodulegroupmapManager/LoadDataToGridPanel.action',
                         method : 'post' 
                     });
                 }
@@ -217,7 +217,7 @@
                         autoScroll: true,
                         lines:false, 
                         rootVisible: false,
-                        loader: new Ext.tree.TreeLoader({dataUrl:'/project1/ActionmodulegroupmapManager/LoadDataToTreePanel.action'}),
+                        loader: new Ext.tree.TreeLoader({dataUrl:'/DeviceManageSystem/ActionmodulegroupmapManager/LoadDataToTreePanel.action'}),
                         root:new Ext.tree.AsyncTreeNode({
                             draggable:false,
                             id:'888888888'
@@ -283,7 +283,7 @@
                     });  
                     if (json.length > 0) {  
                         Ext.Ajax.request({  
-                            url: "/project1/ActionmodulegroupmapManager/DeleteDataToDb.action",  
+                            url: "/DeviceManageSystem/ActionmodulegroupmapManager/DeleteDataToDb.action",  
                             params: { data: Ext.util.JSON.encode(json),idActionModuleGroup:idActionModuleGroup},  
                             method: "POST",  
                             success: function(response) {},  
@@ -302,7 +302,7 @@
                     });  
                     if (json.length > 0) {  
                         Ext.Ajax.request({  
-                            url: "/project1/ActionmodulegroupmapManager/UpdateDataToDb.action",  
+                            url: "/DeviceManageSystem/ActionmodulegroupmapManager/UpdateDataToDb.action",  
                             params: { data: Ext.util.JSON.encode(json),idActionModuleGroup:idActionModuleGroup},  
                             method: "POST",  
                             success: function(response) {  

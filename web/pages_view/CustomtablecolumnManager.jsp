@@ -56,7 +56,7 @@
                 });
                           
                 var proxy_grid=new Ext.data.HttpProxy({
-                    url:'/project1/CustomtablecolumnManager/LoadDataToGridPanel.action',
+                    url:'/DeviceManageSystem/CustomtablecolumnManager/LoadDataToGridPanel.action',
                     method : 'post' 
                 });
                 
@@ -331,7 +331,7 @@
                             iconCls:"script_code",
                             handler:function(){     
                                 Ext.Ajax.request({  
-                                    url: "/project1/CustomtablecolumnManager/GetSQL.action",  
+                                    url: "/DeviceManageSystem/CustomtablecolumnManager/GetSQL.action",  
                                     params: {idCustomTable:idCustomTable},  
                                     method: "POST",  
                                     success: function(response) {
@@ -373,7 +373,7 @@
                                 Ext.MessageBox.confirm('提示', '如果数据表已存在，将删除原数据表中所有数据，确定是否进行?',function(e){
                                     if(e=='yes'){
                                         Ext.Ajax.request({  
-                                            url: "/project1/CustomtablecolumnManager/BuildCustomtable.action",  
+                                            url: "/DeviceManageSystem/CustomtablecolumnManager/BuildCustomtable.action",  
                                             params: {idCustomTable:idCustomTable},  
                                             method: "POST",  
                                             success: function(response) {Ext.Msg.alert("通知", "建表成功！");},  
@@ -402,7 +402,7 @@
                     });  
                     if (json.length > 0) {  
                         Ext.Ajax.request({  
-                            url: "/project1/CustomtablecolumnManager/DeleteDataToDb.action",  
+                            url: "/DeviceManageSystem/CustomtablecolumnManager/DeleteDataToDb.action",  
                             params: { data: Ext.util.JSON.encode(json),idCustomTable:idCustomTable},  
                             method: "POST",  
                             success: function(response) {},  
@@ -421,7 +421,7 @@
                     });  
                     if (json.length > 0) {  
                         Ext.Ajax.request({  
-                            url: "/project1/CustomtablecolumnManager/UpdateDataToDb.action",  
+                            url: "/DeviceManageSystem/CustomtablecolumnManager/UpdateDataToDb.action",  
                             params: { data: Ext.util.JSON.encode(json),idCustomTable:idCustomTable},  
                             method: "POST",  
                             success: function(response) {  
@@ -443,7 +443,7 @@
                     autoScroll: true,
                     lines:false, 
                     rootVisible: false,
-                    loader: new Ext.tree.TreeLoader({dataUrl:'/project1/CustomtablecolumnManager/LoadDataToTreePanel.action'}),
+                    loader: new Ext.tree.TreeLoader({dataUrl:'/DeviceManageSystem/CustomtablecolumnManager/LoadDataToTreePanel.action'}),
                     root:new Ext.tree.AsyncTreeNode({
                         draggable:false,
                         id:'888888888'

@@ -57,7 +57,7 @@
                 
                 function initHttpProxy(){
                     proxy_grid=new Ext.data.HttpProxy({
-                        url:'/project1/RoleactionmodulemapManager/LoadDataToGridPanel.action',
+                        url:'/DeviceManageSystem/RoleactionmodulemapManager/LoadDataToGridPanel.action',
                         method : 'post' 
                     });
                 }
@@ -75,7 +75,7 @@
                     rm=new Ext.grid.RowNumberer();
                     store1_1=new Ext.data.Store({  //井号选择下拉框  
                         proxy: new Ext.data.HttpProxy({     
-                            url: '/project1/RoleactionmodulemapManager/LoadActionmoduleNames.action',
+                            url: '/DeviceManageSystem/RoleactionmodulemapManager/LoadActionmoduleNames.action',
                             method : 'post' 
                         }),     
                         reader: new Ext.data.JsonReader({     
@@ -235,7 +235,7 @@
                         autoScroll: true,
                         lines:false, 
                         rootVisible: false,
-                        loader: new Ext.tree.TreeLoader({dataUrl:'/project1/RoleactionmodulemapManager/LoadDataToTreePanel.action'}),
+                        loader: new Ext.tree.TreeLoader({dataUrl:'/DeviceManageSystem/RoleactionmodulemapManager/LoadDataToTreePanel.action'}),
                         root:new Ext.tree.AsyncTreeNode({
                             draggable:false,
                             id:'888888888'
@@ -301,7 +301,7 @@
                     });  
                     if (json.length > 0) {  
                         Ext.Ajax.request({  
-                            url: "/project1/RoleactionmodulemapManager/DeleteDataToDb.action",  
+                            url: "/DeviceManageSystem/RoleactionmodulemapManager/DeleteDataToDb.action",  
                             params: { data: Ext.util.JSON.encode(json),idRole:idRole},  
                             method: "POST",  
                             success: function(response) {},  
@@ -320,7 +320,7 @@
                     });  
                     if (json.length > 0) {  
                         Ext.Ajax.request({  
-                            url: "/project1/RoleactionmodulemapManager/UpdateDataToDb.action",  
+                            url: "/DeviceManageSystem/RoleactionmodulemapManager/UpdateDataToDb.action",  
                             params: { data: Ext.util.JSON.encode(json),idRole:idRole},  
                             method: "POST",  
                             success: function(response) {  

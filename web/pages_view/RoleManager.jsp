@@ -44,7 +44,7 @@
                 });
                     
                 var proxy_grid=new Ext.data.HttpProxy({
-                    url:'/project1/RoleManager/LoadDataToGridPanel.action',
+                    url:'/DeviceManageSystem/RoleManager/LoadDataToGridPanel.action',
                     method : 'post' 
                 });
                 
@@ -181,7 +181,7 @@
                     });  
                     if (json.length > 0) {  
                         Ext.Ajax.request({  
-                            url: "/project1/RoleManager/DeleteDataToDb.action",  
+                            url: "/DeviceManageSystem/RoleManager/DeleteDataToDb.action",  
                             params: { data: Ext.util.JSON.encode(json) },  
                             method: "POST",  
                             success: function(response) {},  
@@ -200,7 +200,7 @@
                     });  
                     if (json.length > 0) {  
                         Ext.Ajax.request({  
-                            url: "/project1/RoleManager/UpdateDataToDb.action",  
+                            url: "/DeviceManageSystem/RoleManager/UpdateDataToDb.action",  
                             params: { data: Ext.util.JSON.encode(json) },  
                             method: "POST",  
                             success: function(response) {  

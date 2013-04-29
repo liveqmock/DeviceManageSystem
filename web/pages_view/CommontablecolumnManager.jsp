@@ -56,7 +56,7 @@
                 });
                           
                 var proxy_grid=new Ext.data.HttpProxy({
-                    url:'/project1/CommontablecolumnManager/LoadDataToGridPanel.action',
+                    url:'/DeviceManageSystem/CommontablecolumnManager/LoadDataToGridPanel.action',
                     method : 'post' 
                 });
                 
@@ -318,7 +318,7 @@
                     });  
                     if (json.length > 0) {  
                         Ext.Ajax.request({  
-                            url: "/project1/CommontablecolumnManager/DeleteDataToDb.action",  
+                            url: "/DeviceManageSystem/CommontablecolumnManager/DeleteDataToDb.action",  
                             params: {data:Ext.util.JSON.encode(json)},  
                             method: "POST",  
                             success: function(response) {},  
@@ -337,7 +337,7 @@
                     });  
                     if (json.length > 0) {  
                         Ext.Ajax.request({  
-                            url: "/project1/CommontablecolumnManager/UpdateDataToDb.action",  
+                            url: "/DeviceManageSystem/CommontablecolumnManager/UpdateDataToDb.action",  
                             params: { data: Ext.util.JSON.encode(json),tableType:tableType},  
                             method: "POST",  
                             success: function(response) {  
