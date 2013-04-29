@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-4-23 23:15:34 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="org.dbmanager.model.Customsubaction" table="customsubaction" catalog="devicemanagerdb">
+        <id name="idCustomSubAction" type="java.lang.Integer">
+            <column name="idCustomSubAction" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="customaction" class="org.dbmanager.model.Customaction" fetch="select" lazy="false">
+            <column name="idCustomAction" not-null="true" />
+        </many-to-one>
+        <property name="subSql" type="string">
+            <column name="subSQL" length="65535" />
+        </property>
+        <property name="subValue" type="string">
+            <column name="subValue" length="45" />
+        </property>
+        <property name="inputShowName" type="string">
+            <column name="inputShowName" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

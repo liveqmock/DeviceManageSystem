@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-4-23 23:15:34 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="org.dbmanager.model.Tabletype" table="tabletype" catalog="devicemanagerdb">
+        <id name="idTableType" type="java.lang.Integer">
+            <column name="idTableType" />
+            <generator class="identity" />
+        </id>
+        <property name="tableType" type="java.lang.Integer">
+            <column name="tableType" />
+        </property>
+        <property name="tableTypeName" type="string">
+            <column name="tableTypeName" length="45" />
+        </property>
+        <property name="comment" type="string">
+            <column name="comment" length="65535" />
+        </property>
+    </class>
+</hibernate-mapping>

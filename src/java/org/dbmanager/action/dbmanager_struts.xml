@@ -1,0 +1,129 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!-- Author: Administrator -->
+ 
+<struts>
+    <!-- Add your configuration elements here -->
+    <package name="DBManager_Customtable"  namespace="/CustomtableManager" extends="json-default">
+        <action name="LoadDataToGridPanel" class="org.dbmanager.action.CustomtableManagerActionSupport" method="loadDataToGridPanel">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="UpdateDataToDb" class="org.dbmanager.action.CustomtableManagerActionSupport" method="updateDataToDb">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+         <action name="DeleteDataToDb" class="org.dbmanager.action.CustomtableManagerActionSupport" method="deleteDataToDb">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+    </package>
+    
+    <package name="DBManager_Customtablecolumn"  namespace="/CustomtablecolumnManager" extends="json-default">
+        <action name="LoadDataToGridPanel" class="org.dbmanager.action.CustomtablecolumnManagerActionSupport" method="loadDataToGridPanel">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="LoadDataToTreePanel" class="org.dbmanager.action.CustomtablecolumnManagerActionSupport" method="loadDataToTreePanel">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="UpdateDataToDb" class="org.dbmanager.action.CustomtablecolumnManagerActionSupport" method="updateDataToDb">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+         <action name="DeleteDataToDb" class="org.dbmanager.action.CustomtablecolumnManagerActionSupport" method="deleteDataToDb">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="LoadCommontablecolumn" class="org.dbmanager.action.CustomtablecolumnManagerActionSupport" method="loadCommontablecolumn">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="BuildCustomtable" class="org.dbmanager.action.CustomtablecolumnManagerActionSupport" method="buildCustomtable">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="GetSQL" class="org.dbmanager.action.CustomtablecolumnManagerActionSupport" method="getSQL">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+    </package>
+    
+    <package name="DBManager_Commontablecolumn"  namespace="/CommontablecolumnManager" extends="json-default">
+        <action name="LoadDataToGridPanel" class="org.dbmanager.action.CommontablecolumnManagerActionSupport" method="loadDataToGridPanel">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="UpdateDataToDb" class="org.dbmanager.action.CommontablecolumnManagerActionSupport" method="updateDataToDb">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+         <action name="DeleteDataToDb" class="org.dbmanager.action.CommontablecolumnManagerActionSupport" method="deleteDataToDb">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+    </package>
+    
+    <package name="DBManager_Customtablequeryactionmap"  namespace="/CustomtablequeryactionmapManager" extends="json-default">
+        <action name="LoadDataToGridPanel" class="org.dbmanager.action.CustomtablequeryactionmapManagerActionSupport" method="loadDataToGridPanel">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="UpdateDataToDb" class="org.dbmanager.action.CustomtablequeryactionmapManagerActionSupport" method="updateDataToDb">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+         <action name="DeleteDataToDb" class="org.dbmanager.action.CustomtablequeryactionmapManagerActionSupport" method="deleteDataToDb">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+    </package>
+    
+    <package name="DBManager_Customtablequeryactionedit"  namespace="/CustomtablequeryactioneditManager" extends="json-default">
+        <action name="LoadDataToGridPanel" class="org.dbmanager.action.CustomtablequeryactioneditManagerActionSupport" method="loadDataToGridPanel">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="LoadDataToTreePanel" class="org.dbmanager.action.CustomtablequeryactioneditManagerActionSupport" method="loadDataToTreePanel">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="LoadCustomtablecolumnNames" class="org.dbmanager.action.CustomtablequeryactioneditManagerActionSupport" method="loadCustomtablecolumnNames">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="UpdateDataToDb" class="org.dbmanager.action.CustomtablequeryactioneditManagerActionSupport" method="updateDataToDb">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+         <action name="DeleteDataToDb" class="org.dbmanager.action.CustomtablequeryactioneditManagerActionSupport" method="deleteDataToDb">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+    </package>
+    
+</struts>

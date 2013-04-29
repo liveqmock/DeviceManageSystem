@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-4-14 3:22:02 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="org.systemmanager.model.Actionmodule" table="actionmodule" catalog="devicemanagerdb">
+        <id name="idActionModule" type="java.lang.Integer">
+            <column name="idActionModule" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="actionmodulegroup" class="org.systemmanager.model.Actionmodulegroup" fetch="select" lazy="false">
+            <column name="idActionModuleGroup" not-null="true" />
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" length="45" not-null="true" />
+        </property>
+        <property name="url" type="string">
+            <column name="url" length="65535" />
+        </property>
+        <set name="roleactionmodulemaps" inverse="true" lazy="false">
+            <key>
+                <column name="idActionModule" not-null="true" />
+            </key>
+            <one-to-many class="org.systemmanager.model.Roleactionmodulemap" />
+        </set>
+    </class>
+</hibernate-mapping>

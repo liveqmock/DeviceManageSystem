@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-4-14 3:22:02 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="org.systemmanager.model.Department" table="department" catalog="devicemanagerdb">
+        <id name="idDepartment" type="java.lang.Integer">
+            <column name="idDepartment" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="45" not-null="true" />
+        </property>
+        <property name="level" type="int">
+            <column name="level" not-null="true" />
+        </property>
+        <set name="departmentmapsForIdDepartment" inverse="true">
+            <key>
+                <column name="idDepartment" not-null="true" unique="true" />
+            </key>
+            <one-to-many class="org.systemmanager.model.Departmentmap" />
+        </set>
+        <set name="departmentmapsForIdPreDepartment" inverse="true">
+            <key>
+                <column name="idPreDepartment" />
+            </key>
+            <one-to-many class="org.systemmanager.model.Departmentmap" />
+        </set>
+        <set name="users" inverse="true">
+            <key>
+                <column name="idDepartment" not-null="true" />
+            </key>
+            <one-to-many class="org.systemmanager.model.User" />
+        </set>
+    </class>
+</hibernate-mapping>

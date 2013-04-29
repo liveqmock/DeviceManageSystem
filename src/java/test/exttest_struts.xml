@@ -1,0 +1,26 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!-- Author: mac -->
+ 
+<struts>
+    <!-- Add your configuration elements here -->
+    <package name="Test"  namespace="/Test" extends="json-default">
+        <action name="LoadGridColumn" class="test.ExtTestActionSupport" method="loadGridColumn">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="LoadGridRecord" class="test.ExtTestActionSupport" method="loadGridRecord">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="LoadGridData" class="test.ExtTestActionSupport" method="loadGridData">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+    </package>
+</struts>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/DeviceManagerDB?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">abcd1234</property>
+    <property name="connection.is-connection-validation-required">true</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.query.factory_class">org.hibernate.hql.classic.ClassicQueryTranslatorFactory</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="hibernate.connection.release_mode">auto</property>
+    <mapping resource="org/dbmanager/model/Customtablecolumn.hbm.xml"/>
+    <mapping resource="org/dbmanager/model/Customtable.hbm.xml"/>
+    <mapping resource="org/dbmanager/model/Commontablecolumn.hbm.xml"/>
+    <mapping resource="org/dbmanager/model/Tabletype.hbm.xml"/>
+    <mapping resource="org/dbmanager/model/Customquerysubaction.hbm.xml"/>
+    <mapping resource="org/dbmanager/model/Customqueryaction.hbm.xml"/>
+    <mapping resource="org/dbmanager/model/Customtablequeryactionmap.hbm.xml"/>
+    <mapping resource="org/dbmanager/model/Customaction.hbm.xml"/>
+    <mapping resource="org/dbmanager/model/Customsubaction.hbm.xml"/>
+    <mapping resource="org/dbmanager/model/Customtablecustomactionmap.hbm.xml"/>
+    <mapping resource="org/systemmanager/model/Actionmodule.hbm.xml"/>
+    <mapping resource="org/systemmanager/model/Actionmodulegroup.hbm.xml"/>
+    <mapping resource="org/systemmanager/model/User.hbm.xml"/>
+    <mapping resource="org/systemmanager/model/Role.hbm.xml"/>
+    <mapping resource="org/systemmanager/model/Department.hbm.xml"/>
+    <mapping resource="org/systemmanager/model/Roleactionmodulemap.hbm.xml"/>
+    <mapping resource="org/systemmanager/model/Userrolemap.hbm.xml"/>
+    <mapping resource="org/systemmanager/model/Departmentmap.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

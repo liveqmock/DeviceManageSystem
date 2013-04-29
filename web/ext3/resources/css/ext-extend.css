@@ -1,0 +1,78 @@
+.refresh { 
+    background: url(../images/extend/refresh.png) left top no-repeat !important; 
+}
+.exit { 
+    background: url(../images/extend/exit.png) left top no-repeat !important; 
+}
+.home { 
+    background: url(../images/extend/home.png) left top no-repeat !important; 
+}
+.add { 
+    background: url(../images/extend/add.png) left top no-repeat !important; 
+}
+.delete { 
+    background: url(../images/extend/delete.png) left top no-repeat !important; 
+}
+.edit { 
+    background: url(../images/extend/edit.png) left top no-repeat !important; 
+}
+.submit { 
+    background: url(../images/extend/submit.png) left top no-repeat !important; 
+}
+.help { 
+    background: url(../images/extend/help.png) left top no-repeat !important; 
+}
+.passwordset { 
+    background: url(../images/extend/passwordset.png) left top no-repeat !important; 
+}
+.grant { 
+    background: url(../images/extend/grant.png) left top no-repeat !important; 
+}
+.device_in { 
+    background: url(../images/extend/device_in.png) left top no-repeat !important; 
+}
+.device_out { 
+    background: url(../images/extend/device_out.png) left top no-repeat !important; 
+}
+.device_delete { 
+    background: url(../images/extend/device_delete.png) left top no-repeat !important; 
+}
+.dbgo{ 
+    background: url(../images/extend/database_go.png) left top no-repeat !important; 
+}
+.history{ 
+    background: url(../images/extend/history.png) left top no-repeat !important; 
+}
+.script_code{ 
+    background: url(../images/extend/script_code.png) left top no-repeat !important; 
+}
+.table_key{ 
+    background: url(../images/extend/table_key.png) left top no-repeat !important; 
+}
+.table_edit{ 
+    background: url(../images/extend/table_edit.png) left top no-repeat !important; 
+}
+.find{ 
+    background: url(../images/extend/find.png) left top no-repeat !important; 
+}
+.config{ 
+    background: url(../images/extend/config.png) left top no-repeat !important; 
+}
+.basket{ 
+    background: url(../images/extend/basket.png) left top no-repeat !important; 
+}
+.store{ 
+    background: url(../images/extend/database.png) left top no-repeat !important; 
+}
+.get_excel{ 
+    background: url(../images/extend/page_excel.png) left top no-repeat !important; 
+}
+.search{ 
+    background: url(../images/extend/search.png) left top no-repeat !important; 
+}
+.search1{ 
+    background: url(../images/extend/search1.png) left top no-repeat !important; 
+}
+.applications{ 
+    background: url(../images/extend/applications.png) left top no-repeat !important; 
+}

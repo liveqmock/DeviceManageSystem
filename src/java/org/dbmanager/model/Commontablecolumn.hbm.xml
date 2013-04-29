@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-4-23 23:15:34 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="org.dbmanager.model.Commontablecolumn" table="commontablecolumn" catalog="devicemanagerdb">
+        <id name="idCommonTableColumn" type="java.lang.Integer">
+            <column name="idCommonTableColumn" />
+            <generator class="identity" />
+        </id>
+        <property name="tableType" type="int">
+            <column name="tableType" not-null="true" />
+        </property>
+        <property name="columnName" type="string">
+            <column name="columnName" length="45" not-null="true" />
+        </property>
+        <property name="columnShowName" type="string">
+            <column name="columnShowName" length="45" not-null="true" />
+        </property>
+        <property name="columnIsHide" type="boolean">
+            <column name="columnIsHide" not-null="true" />
+        </property>
+        <property name="columnIsPrimaryKey" type="boolean">
+            <column name="columnIsPrimaryKey" not-null="true" />
+        </property>
+        <property name="columnType" type="string">
+            <column name="columnType" length="65535" not-null="true" />
+        </property>
+        <property name="columnRestrict" type="string">
+            <column name="columnRestrict" length="65535" />
+        </property>
+        <property name="columnDefualtValue" type="string">
+            <column name="columnDefualtValue" length="65535" />
+        </property>
+        <property name="columnControlType" type="string">
+            <column name="columnControlType" length="45" />
+        </property>
+        <property name="columnControlDefine" type="string">
+            <column name="columnControlDefine" length="65535" />
+        </property>
+        <property name="columnControlValueType" type="string">
+            <column name="columnControlValueType" length="45" />
+        </property>
+        <property name="comment" type="string">
+            <column name="comment" length="65535" />
+        </property>
+    </class>
+</hibernate-mapping>

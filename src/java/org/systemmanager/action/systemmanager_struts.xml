@@ -1,0 +1,96 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!-- Author: Administrator -->
+
+<struts>
+    <!-- Add your configuration elements here -->
+    <package name="SystemManager_ActionModuleGroup"  namespace="/ActionmodulegroupManager" extends="json-default">
+        <action name="LoadDataToGridPanel" class="org.systemmanager.action.ActionmodulegroupManagerActionSupport" method="loadDataToGridPanel">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="UpdateDataToDb" class="org.systemmanager.action.ActionmodulegroupManagerActionSupport" method="updateDataToDb">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+         <action name="DeleteDataToDb" class="org.systemmanager.action.ActionmodulegroupManagerActionSupport" method="deleteDataToDb">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+    </package>
+    
+    <package name="SystemManager_ActionModuleGroupMap"  namespace="/ActionmodulegroupmapManager" extends="json-default">
+        <action name="LoadDataToGridPanel" class="org.systemmanager.action.ActionmodulegroupmapManagerActionSupport" method="loadDataToGridPanel">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="UpdateDataToDb" class="org.systemmanager.action.ActionmodulegroupmapManagerActionSupport" method="updateDataToDb">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="LoadDataToTreePanel" class="org.systemmanager.action.ActionmodulegroupmapManagerActionSupport" method="loadDataToTreePanel">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+         <action name="DeleteDataToDb" class="org.systemmanager.action.ActionmodulegroupmapManagerActionSupport" method="deleteDataToDb">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+    </package>
+    
+    <package name="SystemManager_Role"  namespace="/RoleManager" extends="json-default">
+        <action name="LoadDataToGridPanel" class="org.systemmanager.action.RoleManagerActionSupport" method="loadDataToGridPanel">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="UpdateDataToDb" class="org.systemmanager.action.RoleManagerActionSupport" method="updateDataToDb">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+         <action name="DeleteDataToDb" class="org.systemmanager.action.RoleManagerActionSupport" method="deleteDataToDb">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+    </package>
+    
+    <package name="SystemManager_RoleActionmoduleMap"  namespace="/RoleactionmodulemapManager" extends="json-default">
+        <action name="LoadDataToGridPanel" class="org.systemmanager.action.RoleactionmodulemapManagerActionSupport" method="loadDataToGridPanel">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="UpdateDataToDb" class="org.systemmanager.action.RoleactionmodulemapManagerActionSupport" method="updateDataToDb">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="LoadDataToTreePanel" class="org.systemmanager.action.RoleactionmodulemapManagerActionSupport" method="loadDataToTreePanel">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="LoadActionmoduleNames" class="org.systemmanager.action.RoleactionmodulemapManagerActionSupport" method="loadActionmoduleNames">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+         <action name="DeleteDataToDb" class="org.systemmanager.action.RoleactionmodulemapManagerActionSupport" method="deleteDataToDb">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+    </package>
+    
+</struts>

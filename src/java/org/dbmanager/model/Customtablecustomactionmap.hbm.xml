@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-4-23 23:15:34 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="org.dbmanager.model.Customtablecustomactionmap" table="customtablecustomactionmap" catalog="devicemanagerdb">
+        <id name="idCustomTableCustomActionMap" type="java.lang.Integer">
+            <column name="idCustomTableCustomActionMap" />
+            <generator class="identity" />
+        </id>
+        <property name="idCustomTable" type="int">
+            <column name="idCustomTable" not-null="true" />
+        </property>
+        <property name="idCustomAction" type="int">
+            <column name="idCustomAction" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

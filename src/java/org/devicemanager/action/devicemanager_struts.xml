@@ -1,0 +1,82 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!-- Author: Administrator -->
+ 
+<struts>
+    <!-- Add your configuration elements here -->
+    <package name="DeviceManager_Manager"  namespace="/DeviceManager" extends="json-default">
+        <action name="LoadDataToTreePanel" class="org.devicemanager.action.DeviceManagerActionSupport" method="loadDataToTreePanel">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="LoadGridColumn" class="org.devicemanager.action.DeviceManagerActionSupport" method="loadGridColumn">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="LoadGridRecord" class="org.devicemanager.action.DeviceManagerActionSupport" method="loadGridRecord">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="LoadGridData" class="org.devicemanager.action.DeviceManagerActionSupport" method="loadGridData">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="CreateInitValue" class="org.devicemanager.action.DeviceManagerActionSupport" method="createInitValue">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="UpdateDataToDb" class="org.devicemanager.action.DeviceManagerActionSupport" method="updateDataToDb">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="DeleteDataToDb" class="org.devicemanager.action.DeviceManagerActionSupport" method="deleteDataToDb">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+    </package>
+    
+    <package name="DeviceFreeQuery_Manager"  namespace="/DeviceFreeQuery" extends="json-default">
+        <action name="LoadDataToTreePanel" class="org.devicemanager.action.DeviceFreeQueryActionSupport" method="loadDataToTreePanel">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="LoadGridColumn" class="org.devicemanager.action.DeviceFreeQueryActionSupport" method="loadGridColumn">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="LoadGridRecord" class="org.devicemanager.action.DeviceFreeQueryActionSupport" method="loadGridRecord">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="LoadGridData" class="org.devicemanager.action.DeviceFreeQueryActionSupport" method="loadGridData">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="LoadCustomtablecolumnNames" class="org.devicemanager.action.DeviceFreeQueryActionSupport" method="loadCustomtablecolumnNames">
+            <result type="json"> 
+                <param name="defaultEncoding">utf-8</param> 
+            </result>
+        </action>
+        <action name="CreateExcel" class="org.devicemanager.action.DeviceFreeQueryActionSupport" method="createExcel">
+            <result name="SUCCESS" type="stream"> 
+                <param name="contentType">application/vnd.ms-excel</param> 
+                <param name="contentDisposition">  
+                    attachment;filename="AllUsers.xls"
+                </param>
+            </result>
+        </action>
+    </package>
+</struts>
